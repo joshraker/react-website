@@ -1,5 +1,5 @@
 import { createMuiTheme, Theme } from '@material-ui/core';
-import { red } from '@material-ui/core/colors';
+import { blue, red } from '@material-ui/core/colors';
 
 class ApplicationTheme {
   get error(): Theme {
@@ -10,6 +10,7 @@ class ApplicationTheme {
     return createMuiTheme({
       palette: {
         primary: { main: '#1c44b2' },
+        secondary: blue,
         type: type
       }
     });
