@@ -21,7 +21,7 @@ import {
 } from '@material-ui/core';
 import { ArrowBack, Assignment, Brightness3, BrightnessHigh, Dashboard, Home } from '@material-ui/icons';
 import MenuIcon from '@material-ui/icons/Menu';
-import { ListItemLink } from 'components/ListItemLink';
+import ListItemLink from 'components/ListItemLink';
 import HomeView from 'components/views/HomeView';
 import ProjectsView from 'components/views/ProjectsView';
 import Hide from 'components/visibility/Hide';
@@ -123,16 +123,31 @@ function _ContentWrapper(props: WithWidthProps): React.ReactElement {
           <div className={classes.drawerContainer}>
             <List>
               <Show when={isMobileSize}>
-                <ListItem className={classes.closeButton} onClick={toggleDrawer}>
+                <ListItem button className={classes.closeButton} onClick={toggleDrawer}>
                   <ListItemIcon>
                     <ArrowBack />
                   </ListItemIcon>
                   <ListItemText primary="Close" />
                 </ListItem>
               </Show>
-              <ListItemLink primary="Home" icon={<Home />} to="/" selected="matchExactPath" />
-              <ListItemLink primary="Projects" icon={<Dashboard />} to="/projects" />
-              <ListItemLink primary="Resume" icon={<Assignment />} to="/resume" />
+              <ListItemLink to="/" exact>
+                <ListItemIcon>
+                  <Home />
+                </ListItemIcon>
+                <ListItemText primary="Home" />
+              </ListItemLink>
+              <ListItemLink to="/projects">
+                <ListItemIcon>
+                  <Dashboard />
+                </ListItemIcon>
+                <ListItemText primary="Projects" />
+              </ListItemLink>
+              <ListItemLink to="/resume">
+                <ListItemIcon>
+                  <Assignment />
+                </ListItemIcon>
+                <ListItemText primary="Resume" />
+              </ListItemLink>
 
               <Divider className={classes.drawerDivider} />
 
