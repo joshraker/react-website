@@ -1,6 +1,8 @@
 import { Chip, ChipProps, Container, Grid, Link, LinkProps, Typography } from '@material-ui/core';
+import { Dashboard, GitHub, LinkedIn } from '@material-ui/icons';
 import GridBreak from 'components/extensions/GridBreak';
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 
 function Section({ children }: React.PropsWithChildren<unknown>): React.ReactElement {
   return (
@@ -113,6 +115,45 @@ export default function ResumeView(): React.ReactElement {
         <Grid item>
           <Typography variant="h3" component="h1">
             Joshua D. Raker
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant="h4">
+            <Grid container spacing={1} justify="space-between">
+              {[
+                {
+                  icon: <GitHub />,
+                  content: (
+                    <Link href="https://github.com/joshraker" color="textSecondary">
+                      GitHub
+                    </Link>
+                  )
+                },
+                {
+                  icon: <LinkedIn />,
+                  content: (
+                    <Link href="https://www.linkedin.com/in/josh-raker-56652689/" color="textSecondary">
+                      LinkedIn
+                    </Link>
+                  )
+                },
+                {
+                  icon: <Dashboard />,
+                  content: (
+                    <Link component={RouterLink} to="/projects" color="textSecondary">
+                      Projects
+                    </Link>
+                  )
+                }
+              ].map(({ icon, content }, index) => (
+                <Grid key={index} item xs={12} sm="auto">
+                  <Grid container spacing={1}>
+                    <Grid item>{icon}</Grid>
+                    <Grid item>{content}</Grid>
+                  </Grid>
+                </Grid>
+              ))}
+            </Grid>
           </Typography>
         </Grid>
 

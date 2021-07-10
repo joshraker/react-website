@@ -19,10 +19,9 @@ import {
   withWidth,
   WithWidthProps
 } from '@material-ui/core';
-import { ArrowBack, Assignment, Brightness3, BrightnessHigh, Dashboard, Home } from '@material-ui/icons';
+import { ArrowBack, Assignment, Brightness3, BrightnessHigh, Dashboard } from '@material-ui/icons';
 import MenuIcon from '@material-ui/icons/Menu';
 import ListItemLink from 'components/ListItemLink';
-import HomeView from 'components/views/HomeView';
 import ProjectsView from 'components/views/ProjectsView';
 import Hide from 'components/visibility/Hide';
 import Show from 'components/visibility/Show';
@@ -132,21 +131,15 @@ function _ContentWrapper(props: WithWidthProps): React.ReactElement {
               </Show>
               <ListItemLink to="/" exact>
                 <ListItemIcon>
-                  <Home />
+                  <Assignment />
                 </ListItemIcon>
-                <ListItemText primary="Home" />
+                <ListItemText primary="Resume" />
               </ListItemLink>
               <ListItemLink to="/projects">
                 <ListItemIcon>
                   <Dashboard />
                 </ListItemIcon>
                 <ListItemText primary="Projects" />
-              </ListItemLink>
-              <ListItemLink to="/resume">
-                <ListItemIcon>
-                  <Assignment />
-                </ListItemIcon>
-                <ListItemText primary="Resume" />
               </ListItemLink>
 
               <Divider className={classes.drawerDivider} />
@@ -178,13 +171,10 @@ function _ContentWrapper(props: WithWidthProps): React.ReactElement {
           <div className={classes.offset} />
           <RouterSwitch>
             <Route exact path="/">
-              <HomeView />
+              <ResumeView />
             </Route>
             <Route path="/projects">
               <ProjectsView />
-            </Route>
-            <Route path="/resume">
-              <ResumeView />
             </Route>
           </RouterSwitch>
         </main>
