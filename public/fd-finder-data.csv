@@ -1,0 +1,6 @@
+SupplierId,SupplierName,PartId,PartName,Stock
+1,Sam,1,Gear,5
+2,Stephen,1,Gear,10
+3,Sarah,2,Screw,20
+1,Sam,2,Screw,50
+3,Sarah,1,Gear,5
