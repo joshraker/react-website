@@ -9,8 +9,7 @@ import {
   Grid,
   Typography
 } from '@material-ui/core';
-import { Assignment, GetApp, GitHub } from '@material-ui/icons';
-import fdFinderImage from 'assets/fd-finder.png';
+import { Assignment, GitHub } from '@material-ui/icons';
 import sudokuSolverImage from 'assets/sudoku-solver.png';
 import React, { ImgHTMLAttributes } from 'react';
 
@@ -73,60 +72,60 @@ export default function ProjectsView(): React.ReactElement {
         <Typography variant="h3">Projects</Typography>
       </Grid>
       <Grid item container spacing={1}>
-        <ProjectCard>
-          <ProjectCardHeader title="Functional Dependency Finder" />
-          <ProjectCardMedia src={fdFinderImage} />
-          <ProjectCardContent>
-            <Grid container direction="column" spacing={1}>
-              <Grid item>
-                <Typography variant="body1">
-                  A simple web app for finding functional dependencies in universal relations.
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant="body2">
-                  <ul>
-                    <li>Takes a .csv upload and produces a table of functional dependencies</li>
-                    <li>
-                      If there is not a functional dependency with one attribute being the determinant and another being
-                      the dependent, then the cell will display which entries in the data set conflict
-                    </li>
-                    <li>
-                      Clicking on the cell highlights the conflicting rows in the data section with the determinant and
-                      dependent highlighted in different colors
-                    </li>
-                    <li>Two attributes can be selected to check for dependencies with a composite determinant</li>
-                    <li>The composite table works the same as the main table but only has one row</li>
-                  </ul>
-                </Typography>
-              </Grid>
-            </Grid>
-          </ProjectCardContent>
-          <ProjectCardActions>
-            <ActionButton
-              startIcon={<GetApp />}
-              component="a"
-              href={`${process.env.PUBLIC_URL}/fd-finder-data.csv`}
-              download
-            >
-              Download Test File
-            </ActionButton>
-            <ActionButton
-              variant="contained"
-              color="primary"
-              startIcon={<GitHub />}
-              component="a"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/joshraker/fd-finder"
-            >
-              Source
-            </ActionButton>
-            <ActionButton variant="contained" color="primary" component="a" href="https://fd-finder.joshraker.com">
-              Try It
-            </ActionButton>
-          </ProjectCardActions>
-        </ProjectCard>
+        {/*<ProjectCard>*/}
+        {/*  <ProjectCardHeader title="Functional Dependency Finder" />*/}
+        {/*  <ProjectCardMedia src={fdFinderImage} />*/}
+        {/*  <ProjectCardContent>*/}
+        {/*    <Grid container direction="column" spacing={1}>*/}
+        {/*      <Grid item>*/}
+        {/*        <Typography variant="body1">*/}
+        {/*          A simple web app for finding functional dependencies in universal relations.*/}
+        {/*        </Typography>*/}
+        {/*      </Grid>*/}
+        {/*      <Grid item>*/}
+        {/*        <Typography variant="body2">*/}
+        {/*          <ul>*/}
+        {/*            <li>Takes a .csv upload and produces a table of functional dependencies</li>*/}
+        {/*            <li>*/}
+        {/*              If there is not a functional dependency with one attribute being the determinant and another being*/}
+        {/*              the dependent, then the cell will display which entries in the data set conflict*/}
+        {/*            </li>*/}
+        {/*            <li>*/}
+        {/*              Clicking on the cell highlights the conflicting rows in the data section with the determinant and*/}
+        {/*              dependent highlighted in different colors*/}
+        {/*            </li>*/}
+        {/*            <li>Two attributes can be selected to check for dependencies with a composite determinant</li>*/}
+        {/*            <li>The composite table works the same as the main table but only has one row</li>*/}
+        {/*          </ul>*/}
+        {/*        </Typography>*/}
+        {/*      </Grid>*/}
+        {/*    </Grid>*/}
+        {/*  </ProjectCardContent>*/}
+        {/*  <ProjectCardActions>*/}
+        {/*    <ActionButton*/}
+        {/*      startIcon={<GetApp />}*/}
+        {/*      component="a"*/}
+        {/*      href={`${process.env.PUBLIC_URL}/fd-finder-data.csv`}*/}
+        {/*      download*/}
+        {/*    >*/}
+        {/*      Download Test File*/}
+        {/*    </ActionButton>*/}
+        {/*    <ActionButton*/}
+        {/*      variant="contained"*/}
+        {/*      color="primary"*/}
+        {/*      startIcon={<GitHub />}*/}
+        {/*      component="a"*/}
+        {/*      target="_blank"*/}
+        {/*      rel="noopener noreferrer"*/}
+        {/*      href="https://github.com/joshraker/fd-finder"*/}
+        {/*    >*/}
+        {/*      Source*/}
+        {/*    </ActionButton>*/}
+        {/*    <ActionButton variant="contained" color="primary" component="a" href="https://fd-finder.joshraker.com">*/}
+        {/*      Try It*/}
+        {/*    </ActionButton>*/}
+        {/*  </ProjectCardActions>*/}
+        {/*</ProjectCard>*/}
 
         <ProjectCard>
           <ProjectCardHeader title="Sudoku Solver" />
